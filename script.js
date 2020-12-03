@@ -14,6 +14,30 @@
 
 var generateBtn = document.querySelector("#generate");
 function promptCriteria() { 
+
+  // Write password to the #password input
+function writePassword() { 
+  var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
+  var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"
+  var numericChar= "0123456789"
+  var specialChar = "!@#$%^&*()_-+={}[];:'`~<,>.?/|"
+  
+  var passwordText = document.querySelector("#password");
+  var password = generatePassword();
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   /* 
     do  {  
         var passwordLength = prompt("password length")
@@ -27,15 +51,3 @@ function generatePassword() {
     return "password" + passwordLength  */
 
 }
-// Write password to the #password input
-function writePassword() { 
-  var 
-  var passwordText = document.querySelector("#password");
-  var password = generatePassword();
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
