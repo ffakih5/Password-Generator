@@ -1,3 +1,3 @@
 # Password-Generator
 Images/Password-Generator.png
-![Getting Started]<<<(my link here )
+![file:///Users/fatimafakih/Password-Generator/index.html]
