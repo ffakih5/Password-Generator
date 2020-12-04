@@ -56,7 +56,7 @@ var generateBtn = document.querySelector("#generate");
     numericValid = prompt("Would you like to to have numeric values in your password? \n(Yes or No)");
       numericValid= numericValid.toLowerCase();
   
-      if (numericValid === null || numericValid === ""){
+      if (numericValid === numericValid === ""){
         alert("Please answer Yes or No");
         confirmNumeric();
   
@@ -104,9 +104,9 @@ var generateBtn = document.querySelector("#generate");
     console.log(passwordLength);
     confirmUppercase();
     console.log(uppercaseValid);
-    confirmNumbers();
+    confirmNumeric();
     console.log(numericValid);
-    determineSpecial();
+    confirmSpecial();
     console.log(specialValid);
   
   var characters = lowercaseChar;
@@ -144,8 +144,8 @@ var generateBtn = document.querySelector("#generate");
   
   // Write password to the #password input
   function writePassword() {
-    var password1 = "";
-    password1 = generatePassword();
+    var userpassword= "";
+    userpassword = generatePassword();
     var passwordText = document.querySelector("#password");
     passwordText.value = password1;
   }
