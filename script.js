@@ -53,4 +53,39 @@ var generateBtn = document.querySelector("#generate");
       return uppercaseValid;
   }
   
+  //Function used to determine whether the user wants to include numbers in the password
+  function confirmNumbers(){
+    numericValid = prompt("Do you want to include numbers in your password? \n(Yes or No)");
+      numericValid= numericValid.toLowerCase();
   
+      if (numericValid === null || numericValid === ""){
+        alert("Please answer Yes or No");
+        confirmNumbers();
+  
+      }else if (numeric === "yes" || numberCheck ==="y"){
+        numberCheck = true;
+        return numberCheck;
+  
+      }else if (numericValid === "no" || numericValid ==="n"){
+        numericValid = false;
+        return numericValid
+      
+      }else {
+        alert("Please answer Yes or No");
+        confirmNumbers();
+      }
+      return numericValid;
+  }
+  
+  
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+    
