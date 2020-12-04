@@ -12,7 +12,6 @@ var generateBtn = document.querySelector("#generate");
   var numericValid;
   var specialValid;
 
-
   function confirmLength(){
     passwordLength = prompt("Please select a password length (between 8-128 characters): ");
   
