@@ -52,17 +52,15 @@ var generateBtn = document.querySelector("#generate");
       }
       return uppercaseValid;
   }
-  
-  //Function used to determine whether the user wants to include numbers in the password
   function confirmNumeric(){
-    numericValid = prompt("Do you want to include numbers in your password? \n(Yes or No)");
+    numericValid = prompt("Would you like to to have numeric values in your password? \n(Yes or No)");
       numericValid= numericValid.toLowerCase();
   
       if (numericValid === null || numericValid === ""){
         alert("Please answer Yes or No");
         confirmNumeric();
   
-      } else if (numeric === "yes" || numberCheck ==="y"){
+      } else if (numeric === "yes" || numericValid ==="y"){
         numericValid = true;
         return numericValid;
   
@@ -76,7 +74,6 @@ var generateBtn = document.querySelector("#generate");
       }
       return numericValid;
   }
-  //Function used to determine whether the user wants to include special characters in the password
   function ConfirmSpecial(){
     specialValid = prompt("Would you like to include special characters in your password? \n(Yes or No)");
       specialValid = specialValid.toLowerCase();
