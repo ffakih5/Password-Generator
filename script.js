@@ -39,8 +39,8 @@ var generateBtn = document.querySelector("#generate");
         confirmUppercase();
   
       } else if (uppercaseValid === "yes" || uppercaseValid ==="y"){
-        uppercaseCheck = true;
-        return uppercaseCheck;
+        uppercaseValid = true;
+        return uppercaseValid;
   
       } else if (uppercaseValid === "no" || uppercaseValid ==="n"){
         uppercaseValid = false;
@@ -54,17 +54,17 @@ var generateBtn = document.querySelector("#generate");
   }
   
   //Function used to determine whether the user wants to include numbers in the password
-  function confirmNumbers(){
+  function confirmNumeric(){
     numericValid = prompt("Do you want to include numbers in your password? \n(Yes or No)");
       numericValid= numericValid.toLowerCase();
   
       if (numericValid === null || numericValid === ""){
         alert("Please answer Yes or No");
-        confirmNumbers();
+        confirmNumeric();
   
       } else if (numeric === "yes" || numberCheck ==="y"){
-        numberCheck = true;
-        return numberCheck;
+        numericValid = true;
+        return numericValid;
   
       } else if (numericValid === "no" || numericValid ==="n"){
         numericValid = false;
@@ -72,7 +72,7 @@ var generateBtn = document.querySelector("#generate");
       
       } else {
         alert("Please answer Yes or No");
-        confirmNumbers();
+        confirmNumeric();
       }
       return numericValid;
   }
@@ -100,7 +100,18 @@ var generateBtn = document.querySelector("#generate");
       return specialValid;
   }
   
-   
+   //Function used to take all the input from the previous functions and generate a password using a random number generator and 
+   //the charAt method 
+  function generatePassword(){
+    confirmLength();
+    console.log(passwordLength);
+    confirmUppercase();
+    console.log(uppercaseValid);
+    confirmNumbers();
+    console.log(numericValid);
+    determineSpecial();
+    console.log(specialValid);
+  
   
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
