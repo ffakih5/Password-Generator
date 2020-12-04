@@ -35,7 +35,7 @@ var generateBtn = document.querySelector("#generate");
       uppercaseValid = uppercaseValid.toLowerCase();
   
       if (uppercaseValid === null || uppercaseValid === ""){
-        alert("Please answer Yes or No");
+        alert("Yes or No");
         confirmUppercase();
   
       } else if (uppercaseValid === "yes" || uppercaseValid ==="y"){
@@ -47,20 +47,20 @@ var generateBtn = document.querySelector("#generate");
         return uppercaseValid;
       
       } else {
-        alert("Please answer Yes or No");
+        alert("Yes or No");
         confirmUppercase();
       }
       return uppercaseValid;
   }
   function confirmNumeric(){
     numericValid = prompt("Would you like to to have numeric values in your password? \n(Yes or No)");
-      numericValid= numericValid.toLowerCase();
+      numericValid = numericValid.toLowerCase();
   
-      if (numericValid === numericValid === ""){
-        alert("Please answer Yes or No");
+      if (numericValid === null || numericValid === ""){
+        alert("Yes or No");
         confirmNumeric();
   
-      } else if (numeric === "yes" || numericValid ==="y"){
+      } else if (numericValid === "yes" || numericValid ==="y"){
         numericValid = true;
         return numericValid;
   
@@ -74,11 +74,11 @@ var generateBtn = document.querySelector("#generate");
       }
       return numericValid;
   }
-  function ConfirmSpecial(){
+  function confirmSpecial(){
     specialValid = prompt("Would you like to include special characters in your password? \n(Yes or No)");
       specialValid = specialValid.toLowerCase();
   
-      if (specialValid=== null || specialValid === ""){
+      if (specialValid === null || specialValid === ""){
         alert("Please answer Yes or No");
         confirmSpecial();
   
@@ -87,18 +87,15 @@ var generateBtn = document.querySelector("#generate");
         return specialValid;
   
       } else if (specialValid === "no" || specialValid ==="n"){
-        specialCheck = false;
+        specialValid = false;
         return specialValid;
       
       } else {
         alert("Please answer Yes or No");
         confirmSpecial();
       }
-      return specialValid;
+       return specialValid;
   }
-  
-   //Function used to take all the input from the previous functions and generate a password using a random number generator and 
-   //the charAt method 
   function generatePassword(){
     confirmLength();
     console.log(passwordLength);
@@ -108,7 +105,7 @@ var generateBtn = document.querySelector("#generate");
     console.log(numericValid);
     confirmSpecial();
     console.log(specialValid);
-  
+    
   var characters = lowercaseChar;
   var password = "";
   if (uppercaseValid && numericValid && specialValid){
@@ -144,10 +141,10 @@ var generateBtn = document.querySelector("#generate");
   
   // Write password to the #password input
   function writePassword() {
-    var userpassword= "";
-    userpassword = generatePassword();
+    var userPassword= "";
+    userPassword = generatePassword();
     var passwordText = document.querySelector("#password");
-    passwordText.value = password1;
+    passwordText.value = userPassword;
   }
 
 
