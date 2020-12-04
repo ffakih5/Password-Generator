@@ -1,2 +1,3 @@
 # Password-Generator
-![Getting Started](Password-Generator.png)
+Images/Password-Generator.png
+![Getting Started]<<<(my link here )
