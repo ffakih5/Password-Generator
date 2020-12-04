@@ -18,8 +18,27 @@ function writePassword() {
       if (errorLength === true) {
         i -= 1 ;
       }
-      
+    }
+  }
+  for (var i= 0; i < 1; i++) {
+        var useLowercase = confirm ("Would you like to use lower case letters in your password? "); 
+     if (useLowercase) {
+           userCharacters += lowercaseChar; 
+        }
+        if (useLowercase) { 
+          userCharctersIndex +=26;
+          }
+          console.log(userCharacters); 
+          console.log(userCharactersIndex); 
 
+      var userUppercase = confirm ("Would you like to use uppercase letters in your password?");
+      if (useUppercase) {
+        userCharacters += uppercaseChar
+     }
+     if (useUppercase) { 
+       userCharctersIndex +=26;
+       } 
+    }
 
 
 
@@ -27,7 +46,7 @@ function writePassword() {
 
         
 
-      )
+      
     }
     
     
