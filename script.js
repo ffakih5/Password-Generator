@@ -19,13 +19,13 @@ var generateBtn = document.querySelector("#generate");
       if (passwordLength<8){
         alert("Password length must be a number between 8-128 characters");
         confirmLength();
-      }else if (passwordLength>128){
+      } else if (passwordLength>128){
         alert("Password length must be a number between 8-128 characters");
         confirmLength();
-      }else if (isNaN(passwordLength)){
+      } else if (isNaN(passwordLength)){
         alert("Password length must be a number between 8-128 characters");
         confirmLength();
-      }else{
+      } else{
       alert("Please answer the following prompts to acquire the most suited criteria for your password.\n");
       }
       return passwordLength;
@@ -38,15 +38,15 @@ var generateBtn = document.querySelector("#generate");
         alert("Please answer Yes or No");
         confirmUppercase();
   
-      }else if (uppercaseValid === "yes" || uppercaseValid ==="y"){
+      } else if (uppercaseValid === "yes" || uppercaseValid ==="y"){
         uppercaseCheck = true;
         return uppercaseCheck;
   
-      }else if (uppercaseValid === "no" || uppercaseValid ==="n"){
+      } else if (uppercaseValid === "no" || uppercaseValid ==="n"){
         uppercaseValid = false;
         return uppercaseValid;
       
-      }else {
+      } else {
         alert("Please answer Yes or No");
         confirmUppercase();
       }
@@ -62,21 +62,45 @@ var generateBtn = document.querySelector("#generate");
         alert("Please answer Yes or No");
         confirmNumbers();
   
-      }else if (numeric === "yes" || numberCheck ==="y"){
+      } else if (numeric === "yes" || numberCheck ==="y"){
         numberCheck = true;
         return numberCheck;
   
-      }else if (numericValid === "no" || numericValid ==="n"){
+      } else if (numericValid === "no" || numericValid ==="n"){
         numericValid = false;
         return numericValid
       
-      }else {
+      } else {
         alert("Please answer Yes or No");
         confirmNumbers();
       }
       return numericValid;
   }
+  //Function used to determine whether the user wants to include special characters in the password
+  function ConfirmSpecial(){
+    specialValid = prompt("Would you like to include special characters in your password? \n(Yes or No)");
+      specialValid = specialValid.toLowerCase();
   
+      if (specialValid=== null || specialValid === ""){
+        alert("Please answer Yes or No");
+        confirmSpecial();
+  
+      }else if (specialValid === "yes" || specialValid ==="y"){
+        specialValid = true;
+        return specialValid;
+  
+      }else if (specialValid === "no" || specialValid ==="n"){
+        specialCheck = false;
+        return specialValid;
+      
+      }else {
+        alert("Please answer Yes or No");
+        confirmSpecial();
+      }
+      return specialValid;
+  }
+  
+   
   
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
