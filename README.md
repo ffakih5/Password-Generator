@@ -10,4 +10,4 @@ _With a click followed by answering simple prompts, you could ensure your own se
 ## Click below to start creating your own secure password! 🔐
 
 
-[file:///Users/fatimafakih/Password-Generator/index.html](Password-Generator)
+[https://ffakih5.github.io/Password-Generator/](Password-Generator)
